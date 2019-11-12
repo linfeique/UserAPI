@@ -22,9 +22,9 @@ namespace UserAPI.Controllers
 
         // GET: api/Usuarios
         [HttpGet]
-        public IEnumerable<Usuarios> GetUsuarios()
+        public ActionResult<IEnumerable<Usuarios>> GetUsuarios()
         {
-            return _context.Usuarios;
+            return Ok(_context.Usuarios.ToList());
         }
 
         // GET: api/Usuarios/5

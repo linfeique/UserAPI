@@ -21,10 +21,7 @@ namespace UserAPI.Domains
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Data Source=.\\SqlExpress01;Initial Catalog=UserAPI;User ID=sa;Password=info@132");
-            }
+            optionsBuilder.UseSqlServer("Data Source=.\\SqlExpress01;Initial Catalog=UserAPI;User ID=sa;Password=info@132");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
